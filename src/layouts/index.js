@@ -2,19 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Header from '../components/header'
-import './index.css'
+import Header from '../components/Header'
+import "../sass/root.scss"
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children, data, location }) => (
   <div>
     <Helmet
       title={data.site.siteMetadata.title}
-      meta={[
+      meta={[ 
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
+    <Header data={data} location={location} />
     <div
       style={{
         margin: '0 auto',
@@ -35,11 +35,18 @@ Layout.propTypes = {
 export default Layout
 
 export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
+query SiteHeadMeta {
+  site {
+	  id
+  	siteMetadata {
+      title
+      description
     }
   }
+  background: imageSharp(id: {regex: "/banner.jpg/"}) {
+    sizes(maxWidth: 1240) {
+      ...GatsbyImageSharpSizes
+    }
+  }
+}
 `

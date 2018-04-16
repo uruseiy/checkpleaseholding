@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Pacifico');
+
+body {
+    // background-color: red;
+    font-family: 'Merriweather';
+    text-shadow: 0px 1px 1px #cccccc;
+}
+
+h1 {
+    font-family: 'Pacifico';
+    color: $color-white;
+    text-shadow: 0px 2px 6px $color-black;
+    font-size: 120pt;
+    text-align: center;
+    margin-top: 10vh;
+}
+
+h1 > a {
+    color: $color-white;
+}
