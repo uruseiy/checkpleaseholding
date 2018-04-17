@@ -5,6 +5,49 @@
 body {
     background-color: $color-white;
     color: $color-black;
+    
+}
+
+header {
+    display:grid;
+    height: 70vh;
+
+    div {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    div.gatsby-image-wrapper {
+        border: red 1px solid;
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    img {
+         display:none;
+    }
+
+    // background: $color-brown;
+    // margin-bottom: 1.45rem;
+    // overflow: hidden;
+    // position: relative;
+    // height: "80vh";
+    // box-shadow: 0px 1px 5px 0px $color-black;    
+
+    // div {
+    //     margin: 0 auto;
+    //     max-width: 960px;
+    //     padding: 1.45rem 1.0875rem;
+    //     position: relative;
+
+    //     h1 {
+    //         z-index: 2;  
+    //         display: block;      
+    //         a {
+    //             text-decoration: none;
+    //         }
+    //     }
+    // }
 }
 
 // .header {
