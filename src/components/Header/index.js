@@ -26,6 +26,24 @@ const HeaderContainer = styled.div`
   z-index: 2;
 `
 
+const BodyContainer = styled.div`
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 1.45rem 1.0875rem;
+    position: relative;
+    z-index: 2;
+`
+
+const FooterConainer = styled.div`
+    box-shadow: 0px 1px 5px 0px rgba(51, 55, 69, 1);
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 1.45rem 1.0875rem;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(145, 87, 13, 1);
+`
+
 export default class Header extends Component {
     render() {
         const {data, location} = this.props
